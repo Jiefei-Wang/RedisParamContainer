@@ -1,0 +1,27 @@
+Package: BiocParallelRedisContainer
+Title: The BiocParallel RedisParam container provider
+Version: 0.99.0
+Authors@R: 
+    person(given = "Jiefei",
+           family = "Wang",
+           role = c("aut", "cre"),
+           email = "szwjf08@gmail.com")
+Description: 
+  Providing the BiocParallel RedisParam container for the DockerParallel package. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+  DockerParallel,
+  RedisParam,
+  methods,
+  utils
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat,
+    BiocParallel,
+    ECSFargateProvider
+VignetteBuilder: knitr

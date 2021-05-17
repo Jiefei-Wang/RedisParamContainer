@@ -12,21 +12,21 @@ RedisParamContainer <- function(image = "", name = NULL,  environment = list(),
 }
 
 
-#' Get the Bioconductor Redis server container
+#' Get the Redis server container
 #'
-#' Get the Bioconductor Redis server container.
+#' Get the Redis server container.
 #'
 #' @inheritParams RedisContainerProvider::RedisServerContainer
 #' @examples RedisServerContainer()
-#' @return a `BiocParallelRedisContainer` object
+#' @return a `RedisContainer` object
 #' @export
 RedisParamServerContainer <- function(environment = list(), tag = "latest"){
   RedisContainerProvider::RedisServerContainer(environment = environment, tag = tag)
 }
 
-#' Get the Redis worker container
+#' Get the RedisParam worker container
 #'
-#' Get the Redis worker container.
+#' Get the RedisParam worker container.
 #'
 #' @param image Character, the worker image used by the container
 #' @param RPackages Character, a vector of R packages that will be installed
@@ -38,10 +38,10 @@ RedisParamServerContainer <- function(environment = list(), tag = "latest"){
 #' @param tag Character, the image tag
 #'
 #' @examples
-#' RedisWorkerContainer(image = "r-base", backend = "doRedis")
-#' @return a `BiocParallelRedisContainer` object
+#' RedisParamWorkerContainer(image = "r-base")
+#' @return a `RedisParamContainer` object
 #' @export
-RedisWorkerContainer <- function(
+RedisParamWorkerContainer <- function(
   image = c("r-base", "bioconductor"),
   RPackages = NULL,
   sysPackages = NULL,

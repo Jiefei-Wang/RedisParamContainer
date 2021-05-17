@@ -1,4 +1,4 @@
-Package: BiocParallelRedisContainer
+Package: RedisParamContainer
 Title: The BiocParallel RedisParam container provider
 Version: 0.99.0
 Authors@R: 
@@ -17,11 +17,11 @@ Imports:
   DockerParallel,
   RedisParam,
   methods,
-  utils
+  utils,
+  RedisContainerProvider
 Suggests: 
     knitr,
     rmarkdown,
     testthat,
-    BiocParallel,
-    ECSFargateProvider
+    BiocParallel
 VignetteBuilder: knitr

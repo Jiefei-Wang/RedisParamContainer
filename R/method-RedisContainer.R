@@ -16,12 +16,12 @@ RedisParamContainer <- function(image = "", name = NULL,  environment = list(),
 #'
 #' Get the Redis server container.
 #'
-#' @inheritParams RedisContainerProvider::RedisServerContainer
+#' @inheritParams RedisBaseContainer::RedisServerContainer
 #' @examples RedisServerContainer()
 #' @return a `RedisContainer` object
 #' @export
 RedisParamServerContainer <- function(environment = list(), tag = "latest"){
-  RedisContainerProvider::RedisServerContainer(environment = environment, tag = tag)
+  RedisBaseContainer::RedisServerContainer(environment = environment, tag = tag)
 }
 
 #' Get the RedisParam worker container

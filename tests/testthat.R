@@ -1,4 +1,4 @@
 library(testthat)
-library(RedisContainerProvider)
+library(RedisBaseContainer)
 
-test_check("RedisContainerProvider")
+test_check("RedisBaseContainer")

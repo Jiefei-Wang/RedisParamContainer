@@ -1,7 +1,9 @@
-RedisParamContainer <- function(image = "", name = NULL,  environment = list(),
+RedisParamContainer <- function(image = "",
+                                name = character(),
+                                environment = list(),
                                 maxWorkerNum = 4L,
-                                RPackages = NULL,
-                                sysPackages = NULL){
+                                RPackages = character(),
+                                sysPackages = character()){
   .RedisParamContainer$new(
     name=name, image = image,
     environment = environment,
@@ -43,8 +45,8 @@ RedisParamServerContainer <- function(environment = list(), tag = "latest"){
 #' @export
 RedisParamWorkerContainer <- function(
   image = c("r-base", "bioconductor"),
-  RPackages = NULL,
-  sysPackages = NULL,
+  RPackages = character(),
+  sysPackages = character(),
   environment = list(),
   maxWorkerNum = 4L,
   tag = "latest"){
